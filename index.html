@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Physics by VG</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f5f7fb;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #00bfff, #1e90ff, #4169e1);
+      color: #fff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+    header h1 {
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    header p {
+      font-size: 22px;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .section-title {
+      background: linear-gradient(135deg, #00bfff, #1e90ff);
+      color: #fff;
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 28px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .section p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 20px 0;
+    }
+    .slider {
+      position: relative;
+      max-width: 800px;
+      margin: 50px auto 30px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      min-width: 100%;
+      display: block;
+    }
+    .slider-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .slider-buttons button {
+      background: linear-gradient(135deg, #00bfff, #1e90ff);
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      margin: 0 15px;
+      cursor: pointer;
+      border-radius: 50px;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background 0.3s;
+    }
+    .slider-buttons button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #1e90ff, #4169e1);
+    }
+    .facility {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .facility h3 {
+      color: #1e90ff;
+      margin-top: 0;
+      font-size: 24px;
+    }
+    .quote {
+      background: #e6f7ff;
+      text-align: center;
+      font-style: italic;
+      font-size: 22px;
+      margin: 70px auto 50px;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 800px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #1e90ff;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+    footer p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Physics by VG</h1>
+    <p>Empower Your Mind, Trust Yourself!</p>
+  </header>
+
+  <div class="section">
+    <div class="section-title">Holistic Development</div>
+    <p>We focus on the intellectual, physical, emotional, and social development of our students through a comprehensive range of facilities and activities.</p>
+
+    <div class="section-title">Best Coaching for CBSE & ICSE</div>
+    <p>Looking for the best coaching for class 10 in Indore or top tuition for school students? Our experienced faculty provides 24/7 guidance for both CBSE and ICSE Board curricula.</p>
+
+    <div class="section-title">Trusted After-School Tuition</div>
+    <p>As the leading coaching institute in Gwalior, Physics by VG stands for quality education and holistic student growth.</p>
+
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="1.png" alt="Slide 1">
+        <img src="2.png" alt="Slide 2">
+        <img src="3.png" alt="Slide 3">
+        <img src="4.png" alt="Slide 4">
+        <img src="5.png" alt="Slide 5">
+      </div>
+    </div>
+    <div class="slider-buttons">
+      <button onclick="prevSlide()">&#10094; Previous</button>
+      <button onclick="nextSlide()">Next &#10095;</button>
+    </div>
+
+    <div class="facility">
+      <h3>Indoor & Outdoor Games</h3>
+      <p>Modern rooftop turf and indoor gaming facilities for a healthy balance of study and play.</p>
+    </div>
+    <div class="facility">
+      <h3>High-Speed Wi-Fi</h3>
+      <p>Stay connected with our high-speed internet throughout the campus.</p>
+    </div>
+    <div class="facility">
+      <h3>Hygienic Ambience</h3>
+      <p>Clean, sanitized, and healthy environment for better focus and learning.</p>
+    </div>
+
+    <div class="quote">
+      "Success is not final, failure is not fatal: it is the courage to continue that counts."
+    </div>
+  </div>
+
+  <footer>
+    <p>Contact: 7530177795</p>
+    <p>Address: Gwalior</p>
+    <p>&copy; 2025 Physics by VG. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function showSlide(index) {
+      if (index >= totalSlides) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+      } else {
+        currentIndex = index;
+      }
+      slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+  </script>
+</body>
+</html>
